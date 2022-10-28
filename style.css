@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+margin:0;
+padding:0;
+font-family: 'Poppins', sans-serif;
+font-size: 15px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+margin:0 auto;
+
+width: 90%;
+max-width: 1440px;
+}
+
+main {
+    text-align: center;
+}
+
+.flexWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.flexWrapper__card {
+  background-color: white;
+  align-self: center;
+  padding: 1.5rem;
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 16rem;
+  border-radius: 6px;
+  width: 25rem;
+  min-width: 25rem;
+
+  border-top: 4px solid black;
+  -webkit-box-shadow: 15px 17px 26px 10px rgba(0,0,0,0.15);
+  -moz-box-shadow: 15px 17px 26px 10px rgba(0,0,0,0.15);
+  box-shadow: 15px 17px 26px 10px rgba(0,0,0,0.15);
+}
+
+
+.flexWrapper__card > img {
+  width: min-content;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.flexWrapper__mid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+.flexWrapper__card:nth-child(1) {
+  border-color: cyan;
+}
+
+#builderCard {
+  border-color: red;
+}
+
+.flexWrapper__card:nth-child(2) {
+  border-color: orange;
+}
+.flexWrapper__card:nth-child(3) {
+  border-color: #1E90FF	;
+}
+
+/* Typo */
+.mainText > p {
+  color: hsl(0, 0%, 60%);
+}
+.flexWrapper__card > p {
+  font-weight: 200;
+  color: hsl(0, 0%, 60%);
+  margin: 0;
+}
+.title1 {
+  font-weight: 400;
+}
+.title2 {
+  font-weight: 600;
+}
+
+@media screen and ( max-width:1300px ) {
+  /*  Ajustar min-width e min-height para o tamanho < 425 px */
+  .flexWrapper {
+    flex-direction: column;
+  }
+}
+
+@media screen and ( max-width:500px ) {
+  .flexWrapper__card {
+    min-width: 19rem;
+    min-height: 17rem;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media screen and ( min-width:768px ) {
+
+  .title1{
+    display: block;
+  }
+
+  .mainText {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and ( min-width:1200px ) {
+
+  .title1{
+    display: block;
+  }
+
+  .mainText {
+    max-width: 35%;
+    margin: 0 auto;
+  }
+}
